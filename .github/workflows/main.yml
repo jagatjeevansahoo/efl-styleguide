@@ -13,7 +13,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build app
-        run: npm run build
+        run: npm run prod
       - name: Semantic release
         env:
           GITHUB_TOKEN: ${{ secrets.STYLEGUIDE_GITHUB_TOKEN }}
