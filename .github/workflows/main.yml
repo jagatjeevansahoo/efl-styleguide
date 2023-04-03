@@ -13,9 +13,9 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build app
-        run: npm run build-storybook
+        run: npm run build
       - name: Semantic release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.STYLEGUIDE_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.STYLEGUIDE_NPM_TOKEN }}
         run: npx semantic-release
